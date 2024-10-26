@@ -1,0 +1,29 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title #{title}
+        link(rel="stylesheet", href="/css/main.css")
+        link(rel="stylesheet", href="/css/shop.css")
+    body 
+        header.header
+            nav.header-nav
+                ul.header-ul
+                    li.header-li    
+                        a(href="/") Shops
+                    li.header-li    
+                        a(href="/admin/add-product") Add Product
+        main.main 
+                if prods.length > 0
+                    each product in prods
+                        div.main-container 
+                            .product-container
+                                p.title #{product.title} 
+                                div.image-container
+                                    img.product-image(src="https://imageio.forbes.com/specials-images/imageserve/5f85be4ed0acaafe77436710/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds", alt="image") 
+                                p.product-price Price $20.00
+                                p.product-description Discover the #{product.title} inside you !    
+                                button.add-cart Add to cart
+                else 
+                    p Add Products

@@ -1,0 +1,37 @@
+.main {
+    width: 100%;
+}
+.form {
+    width: 90%;
+    margin: 20px auto;
+}
+.product {
+    font-family: inherit;
+}
+.product label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #6b006b;
+}
+.product input {
+    width: 50%;
+    display: block;
+    margin-bottom: 10px;
+    height: 25px;
+    border: 1px solid violet;
+    border-radius: 5px;
+}
+.product input:focus {
+    border: 1px solid violet;
+    outline-width: 0;
+}
+.submit-button {
+    padding: 7px 14px;
+    background: #df93ff;
+    border: none;
+    border-radius: 3px;
+    color: #4d0084;
+    font-weight: 700;
+    cursor: pointer;
+}
