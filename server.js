@@ -3,7 +3,6 @@ require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
-const expressHbs = require('express-handlebars');
 
 //importing routes
 const shopRoutes = require('./routes/shop');
@@ -11,7 +10,6 @@ const adminRoutes = require('./routes/admin');
 
 const app = express();
 
-app.engine('handlebars', expressHbs);
 
 app.set('view engine', 'pug');
 app.set('views', 'views');
