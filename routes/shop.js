@@ -11,7 +11,7 @@ router.get('/', (req, res, next) => {
     products = adminData.products;
     console.log('shop admin data _____ ', adminData.products);
     // res.sendFile(path.join(rootDir, 'views', 'shop.html'));
-    res.render('shop', {prods: products, title: 'Shop'});
+    res.render('shop', {prods: products, title: 'Shop', hasProducts: products.length > 0});
 })
 
 

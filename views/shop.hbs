@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ title }}</title>
+        <link rel="stylesheet" href="/css/main.css"></link>
+        <link rel="stylesheet" href="/css/shop.css"></link>
+    </head>
+    <body>
+        <header class="header">
+            <nav class="header-nav">
+                <ul class="header-ul">
+                    <li class="header-li"><a href="/">Shop</a></li>
+                    <li class="header-li"><a href="/admin/add-product">Add Product</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main">
+            {{#if hasProducts}}
+                {{#each prods}}
+                    <div class="main-container">
+                        <div class="product-container">
+                            <p class="title">{{this.title}}</p>
+                            <div class="image-container">
+                                <img src="https://imageio.forbes.com/specials-images/imageserve/5f85be4ed0acaafe77436710/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds" alt="image" />
+                            </div>
+                            <p class="product-price">Price $20</p>
+                            <p class="product-description">
+                                Discover the diamond inside you
+                            </p>
+                            <button class="add-cart">Add to cart</button>
+                        </div>
+                    </div>
+                {{/each}}
+            {{ else }}
+                <p>Please add products to review</p>
+            {{/if}}
+        </main>
+    </body>
+</html>
